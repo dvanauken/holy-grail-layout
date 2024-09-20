@@ -1,0 +1,22 @@
+<!-- app.component.html -->
+<div class="holy-grail-layout">
+  <header>Header</header>
+  <div class="main-content">
+    <nav [class.expanded]="isMenuExpanded" class="left-panel">
+      <button (click)="toggleMenu()">Toggle Menu</button>
+      <ul *ngIf="isMenuExpanded" class="expanded-menu">
+        <li>Menu Item 1</li>
+        <li>Menu Item 2</li>
+        <li>Menu Item 3</li>
+      </ul>
+      <ul *ngIf="!isMenuExpanded" class="collapsed-menu">
+        <li><i class="icon">1</i></li>
+        <li><i class="icon">2</i></li>
+        <li><i class="icon">3</i></li>
+      </ul>
+    </nav>
+    <main>Content</main>
+    <aside class="right-panel">Right Panel</aside>
+  </div>
+  <footer>Footer</footer>
+</div>

@@ -1,0 +1,61 @@
+/* app.component.css */
+.holy-grail-layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  margin: 0;
+}
+
+header, footer {
+  background-color: #f0f0f0;
+  padding: 1rem;
+}
+
+.main-content {
+  display: flex;
+  overflow: hidden;
+}
+
+.left-panel {
+  background-color: #e0e0e0;
+  transition: width 0.3s ease;
+}
+
+.left-panel.expanded {
+  width: 200px;
+}
+
+.left-panel:not(.expanded) {
+  width: 50px;
+}
+
+.right-panel {
+  background-color: #d0d0d0;
+  width: 200px;
+}
+
+main {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.expanded-menu, .collapsed-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.collapsed-menu .icon {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+}
